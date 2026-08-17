@@ -1,0 +1,24 @@
+# Compiled binaries
+myshell
+*.out
+*.o
+
+# Build directories
+build/
+bin/
+
+# Debug files
+*.dSYM/
+core
+core.*
+
+# Generated shell output
+output.txt
+errors.txt
+
+# Editor / IDE files
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
