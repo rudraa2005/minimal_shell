@@ -245,7 +245,7 @@ void execute_pipeline(char *line, int background){
 
     int pipes[31][2];
 
-    for(int i =0 ; i<command_count-2; i++){
+    for(int i =0 ; i<command_count-1; i++){
         if(pipe(pipes[i])<0){
             perror("pipe");
             return;
@@ -273,7 +273,6 @@ void execute_pipeline(char *line, int background){
             setpgid(0,pgid);
 
             signal(SIGINT, SIG_DFL);
-            signal(SIGSTOP, SIG_DFL);
             signal(SIGTTIN,SIG_DFL);
             signal(SIGTTOU,SIG_DFL);
             signal(SIGCHLD,SIG_DFL);
